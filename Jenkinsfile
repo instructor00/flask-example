@@ -4,7 +4,8 @@ node {
      }
      stage('Build image') {
          app = docker.build("instructor00/flask-example")
-         
+        
+          
      }
      stage('Push image') {
          docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
